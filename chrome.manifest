@@ -1,0 +1,5 @@
+content  zotero-name-scanner          content/
+locale   zotero-name-scanner  en-US   locale/en-US/
+skin     zotero-name-scanner  default skin/
+
+overlay  chrome://zotero/content/zoteroPane.xul  chrome://zotero-name-scanner/content/overlay.xul

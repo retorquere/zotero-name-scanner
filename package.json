@@ -1,0 +1,39 @@
+{
+  "name": "zotero-name-scanner",
+  "version": "5.0.1",
+  "private": true,
+  "description": "Zotero Name Scanner",
+  "preferglobal": true,
+  "scripts": {
+    "lint": "tslint -t stylish --project .",
+    "prebuild": "npm run lint",
+    "build": "webpack",
+    "postbuild": "zotero-plugin-zipup build zotero-name-scanner",
+    "release": "zotero-plugin-release",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retorquere/zotero-name-scanner.git"
+  },
+  "author": {
+    "name": "Emiliano Heyns",
+    "email": "Emiliano.Heyns@iris-advies.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retorquere/zotero-name-scanner/issues"
+  },
+  "dependencies": {
+    "circular-dependency-plugin": "^5.0.2",
+    "zotero-plugin": "^0.0.57"
+  },
+  "xpi": {
+    "name": "Zotero Name Scanner",
+    "updateLink": "https://github.com/retorquere/zotero-name-scanner/releases/download/v{version}/zotero-name-scanner-{version}.xpi",
+    "releaseURL": "https://github.com/retorquere/zotero-name-scanner/releases/download/release/"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.1"
+  }
+}
